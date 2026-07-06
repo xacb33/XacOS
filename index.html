@@ -1,0 +1,207 @@
+<body id="body" style=" background-image: url(./wallpaper2.jpg); background-size: cover; background-color: #d0f8f1; font-family: Andale Mono, monospace">
+<!-- Welcome window -->
+<div id="welcome" class="window" style="top: 50%; left: 50%;">
+
+ <!-- Welcome header -->
+  <div id="welcomeheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">Welcome</p>
+       <!-- Close button -->
+      <div  id="welcomeclose" class="closebutton"> X </div>
+
+    </div> 
+
+  <!-- Welcome content -->
+  <h1>Welcome to XacOS beta!</h1>
+  <h2>Introduction</h2>
+  <h3><strong>Hello World!</strong></h3>
+  <p><strong>Name:</strong> Xacobe</p>
+  <p><strong>Location:</strong> Spain</p>
+  <p><strong>Age:</strong> 16</p>
+  <p style="color:green"><strong>Favourite color:</strong> Green</p>
+  <p><strong>Passion:</strong> Computer stuff ;) (More on that later)</p>
+  <p><strong>Pet:</strong> Fiera <img src="IMG_20260328_232317 (3).jpg" width="50" height="50" style="border-radius: 300px; object-fit: cover; vertical-align: middle" /></p>
+  <a href="https://www.youtube.com/channel/UCvILah8hAWYhYOmAG3ZjvBA">Some of my favourite music</a>
+  <h3 style="color:rgb(0, 0, 0)">Feel free to explore my OS!</h3>
+  <p style="color:rgba(179, 179, 179, 0.648)">Thanks to <a href="https://hackclub.com/">Hack Club</a> for their amazing projects!</p>
+
+
+</div>
+
+<!-- Taskbar -->
+<div id="taskBar" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #ffffff9e;
+  backdrop-filter: blur(10px);
+
+  padding: 0 20px;
+  box-sizing: border-box;
+">    <p id="openwelcome" style="cursor: pointer">
+        XacOS
+     </p> 
+     <img src="explorer.png" width="30" height="30" style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle" class="projectsScreenTaskbar" />
+     <img src="PC.jpg" width="30" height="30" style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle" class="project1ScreenTaskbar" />
+     <img src="proxmox.webp" width="30" height="30" style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle" class="project2ScreenTaskbar" />
+     <img src="psu.jpg" width="30" height="30" style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle" class="project3ScreenTaskbar"  />
+     <img src="IMG_20260328_232317 (3).jpg" width="30" height="30" style="border-radius: 10px; display:flex; object-fit: cover; vertical-align: middle" class="welcomeTaskbar" />
+     <img src="settings.png" width="30" height="30" style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle" class="settingsScreenTaskbar" />
+
+    <p id="timeElement">
+         Time
+    </p>
+</div>
+
+  <div id="desktopApps" style="padding-top: 12px; padding-left: 16px;">
+    <div>
+     <img id="projectsIcon" style="cursor: pointer" src="explorer.png" width="80" height="80" style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+     <p style="margin-left: 3px;">Projects</p>
+
+     <img id="settingsIcon" style="cursor: pointer" src="settings.png" width="80" height="80" style="border-radius: 30px; object-fit: cover; vertical-align: middle" />
+     <p style="margin-left: 3px;">Settings</p>
+    </div>
+  </div>
+
+<div id="projectsScreen" class="window" style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between;">
+
+ <!-- Projects header -->
+  <div id="projectsScreenheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">Projects</p>
+       <!-- Close button -->
+      <div  id="projectsclose" class="closebutton"> X </div>
+
+    </div> 
+
+  <!-- Projects content -->
+  <h1>C:/Users/You/Documents/</h1>
+  <div style="display: flex; flex-direction: row; gap: 20px; padding-top: 10px;">
+    <div>
+      <img id="project1Icon" style="cursor: pointer" src="PC.jpg" width="80" height="80" style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+      <p style="margin-left: 3px;">My PC</p>
+    </div>
+    <div>
+      <img id="project2Icon" style="cursor: pointer" src="proxmox.webp" width="80" height="80" style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+      <p style="margin-left: 3px;">Homelab</p>
+    </div>
+    <div>
+      <img id="project3Icon" style="cursor: pointer" src="psu.jpg" width="80" height="80" style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+      <p style="margin-left: 3px;">DIY Lab PSU</p>
+    </div>
+    <div>
+      <img id="project4Icon" style="cursor: pointer" src="hardware.png" width="80" height="80" style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+      <p style="margin-left: 3px;">Many more</p>
+    </div>
+  </div>
+</div>
+
+<div id="project1Screen" class="window" style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between;">
+
+ <!-- Project1 header -->
+  <div id="project1Screenheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">My PC</p>
+       <!-- Close button -->
+      <div  id="project1close" class="closebutton"> X </div>
+
+    </div> 
+  <div>
+  <!-- Project1 content -->
+  <h1>My PC</h1>
+  <p>I custom-built this PC when my previous laptop's GPU died.</p>
+  <p>I was at first unsure if I would be able to make a full working computer,</p>
+  <p>but I ended up being very lucky with the pricing of second-hand parts</p>
+  <p>and managed to get it working! (Altough at first I bought a PSU without</p>
+  <p>the right connectors, so I had to buy a new one) It ended up being less </p>
+  <p>expensive than I had expected! Less than 600€</p>
+  <p>Here are the specs if you are interested:</p>
+  <ul>
+    <li>CPU: AMD Ryzen 5 5600X</li>
+    <li>GPU: EVGA GeForce RTX 3080</li>
+    <li>RAM: 24GB DDR4</li>
+    <li>Storage: 1TB NVMe SSD</li>
+    <li>Motherboard: gigabyte B550mk</li>
+    <li>PSU: 750W P750BS</li>
+    <li>Case: MSI MAG M100R</li>
+  </ul>
+</div>
+</div>
+
+<div id="project2Screen" class="window" style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between;">
+
+ <!-- Project2 header -->
+  <div id="project2Screenheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">My PC</p>
+       <!-- Close button -->
+      <div  id="project2close" class="closebutton"> X </div>
+
+    </div> 
+  <div>
+  <!-- Project2 content -->
+  <h1>Homelab</h1>
+  <p>I started a long time ago with just a Raspberry Pi 4b that my parents had gifted me </p>
+  <p>and had no idea what to do with it. I installed Home Assistant on it and I was </p>
+  <p>(and still am) obssesed with integrating all our IoT devices. (Tuya ones are the most difficult)</p>
+  <p>This year I bought a second-hand miniPC to expand operations. I now have Nextcloud with 2x 2TB drives in RAID</p>
+  <p>, Home Assistant, Pihole, Frigate... I am very proud of it :)</p> 
+
+</div>
+</div>
+
+<div id="project3Screen" class="window" style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between;">
+
+ <!-- Project3 header -->
+  <div id="project3Screenheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">My PC</p>
+       <!-- Close button -->
+      <div  id="project3close" class="closebutton"> X </div>
+
+    </div> 
+  <div>
+  <!-- Project3 content -->
+  <h1>DIY Lab PSU</h1>
+  <p>This is a project I'm quite proud of. I know </p>
+  <p>it has a lot of flaws that could be corrected </p>
+  <p>but it is good enough for my needs</p>
+  <p>It is basically a 12V 5A PSU with a SK120</p>
+  <p>, a fan and a couple connectors inside</p> 
+  <p>a 3D printed case</p> 
+</div>
+</div>
+
+<div id="settingsScreen" class="window" style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between;">
+
+ <!-- Settings header -->
+  <div id="settingsScreenheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">Settings</p>
+       <!-- Close button -->
+      <div  id="settingsclose" class="closebutton"> X </div>
+
+    </div> 
+  <div>
+  <!-- Settings content -->
+  <h1>Settings</h1>
+  <h2 style="display: flex; align-items: center; gap: 8px;">
+    <img src="personalization.webp" width="30" height="30" style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+    <strong>Personalization</strong>
+  </h2>
+
+ <div style="background-color: #2c2a2a9e; backdrop-filter: blur(10px); padding: 10px; border-radius: 10px; margin-top: 10px;">
+    <h2>Wallpaper</h2>
+    <div style="display: flex; flex-direction: row; gap: 10px;">
+      <img id="wallpaper1" src="wallpaper.jpg" width="50px" height="50px" style="border-radius: 10px; object-fit: cover; vertical-align: middle; cursor: pointer;" />
+      <img id="wallpaper2" src="wallpaper2.jpg" width="50px" height="50px" style="border-radius: 10px; object-fit: cover; vertical-align: middle; cursor: pointer;" />
+    </div>
+ </div>
+ </div >
+
+</div>
+
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</body>
