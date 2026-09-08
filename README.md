@@ -2,7 +2,7 @@
 
 ![screenst](<Captura de pantalla 2026-07-07 000315.png>)
 
-This is a very bare-bones WebOS simulator to present myself.
+This is a very bare-bones WebOS simulator to introduce myself.
 The main objective was to learn HTML, JavaScript and CSS, so expect the code to be a mess...
 
 ## What's new in 1.0
