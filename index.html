@@ -1,26 +1,36 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XacOS 2.0</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
 <body id="body"
-  style=" background-image: url(./wallpaper2.jpg); background-size: cover; background-color: #d0f8f1; font-family: Andale Mono, monospace">
-  <!-- Welcome window -->
-  <div id="welcome" class="window" style="top: 50%; left: 50%;">
+  style=" background-image: url(./wallpaper2.jpg); background-size: cover; background-color: #d0f8f1; font-family: Saira">
 
-    <!-- Welcome header -->
-    <div id="welcomeheader" class="windowheader">
-      <p style="margin-left: 10px; color: #000000; font-weight: 500">Welcome</p>
+
+  <!-- aboutMe window -->
+  <div id="aboutMe" class="window" style="top: 50%; left: 50%; display: none;">
+
+    <!-- About creator header -->
+    <div id="aboutMeheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">About Me</p>
       <!-- Close button -->
-      <div id="welcomeclose" class="closebutton"> X </div>
+      <div id="aboutMeclose" class="closebutton"> X </div>
 
     </div>
 
-    <!-- Welcome content -->
-    <h1>Welcome to XacOS v1.0!</h1>
-    <p style="color:red"><strong>Some browsers/screens may display everything too big. Please zoom out :)</strong></p>
-    <h2>Introduction</h2>
+    <!-- About creator content -->
+    <h2>About me</h2>
     <h3><strong>Hello World!</strong></h3>
     <p><strong>Name:</strong> Xacobe</p>
     <p><strong>Location:</strong> Spain</p>
     <p><strong>Age:</strong> 16</p>
     <p style="color:green"><strong>Favourite color:</strong> Green</p>
-    <p><strong>Passion:</strong> Computer stuff ;) (More on that later)</p>
+    <p><strong>Passion:</strong> Computer stuff ;) (3 of my projects in Files)</p>
     <p><strong>Pet:</strong> Fiera <img src="IMG_20260328_232317 (3).jpg" width="50" height="50"
         style="border-radius: 300px; object-fit: cover; vertical-align: middle" /></p>
     <h3 style="color:rgb(0, 0, 0)">Feel free to explore my OS!</h3>
@@ -36,88 +46,113 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
-  --taskbar-height: 50px;
+  height: var(--taskbar-height);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background-color: #ffffff9e;
+  background-color: var(--theme-color, #ffffff9e);
   backdrop-filter: blur(10px);
 
   padding: 0 20px;
   box-sizing: border-box;
 ">
-    <p id="openwelcome" style="cursor: pointer">
-      XacOS
+    <p id="openaboutMe" style="cursor: pointer">
+      <strong>XacOS</strong>
     </p>
-    <img src="explorer.png" width="30" height="30"
-      style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle"
+    <img src="explorer.png" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle"
       class="projectsScreenTaskbar" />
-    <img src="PC.jpg" width="30" height="30"
-      style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle"
+    <img src="PC.jpg" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle"
       class="project1ScreenTaskbar" />
-    <img src="proxmox.webp" width="30" height="30"
-      style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle"
+    <img src="proxmox.webp" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle"
       class="project2ScreenTaskbar" />
-    <img src="psu.jpg" width="30" height="30"
-      style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle"
+    <img src="psu.jpg" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle"
       class="project3ScreenTaskbar" />
-    <img src="welcome.png" width="30" height="30"
-      style="border-radius: 10px; display:flex; object-fit: cover; vertical-align: middle" class="welcomeTaskbar" />
-    <img src="settings.png" width="30" height="30"
-      style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle"
+    <img src="aboutMe.png" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle" class="aboutMeTaskbar" />
+    <img src="settings.png" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle"
       class="settingsScreenTaskbar" />
-    <img src="sticky_note.png" width="30" height="30"
-      style="border-radius: 10px; display:none; object-fit: cover; vertical-align: middle"
+    <img src="sticky_note.png" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle"
       class="stickyNotesScreenTaskbar" />
+    <img src="personalization.webp"
+      style="width: 2vw; height: 2vw; border-radius: 5px; display: none; object-fit: cover;"
+      class="paintScreenTaskbar" />
+    <img src="OOBE.png" style="width: 2vw; height: 2vw; border-radius: 5px; display:none; object-fit: cover; vertical-align: middle" class="OOBEScreenTaskbar" />
+    <div id="taskbarActiveIndicator" aria-hidden="true"></div>
+    <div id="taskbarTime" aria-label="Fecha y hora" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: fit-content; flex: 0 0 auto; gap: 0;">
+      <p id="timeElementHour">
+        <strong>Starting XacOS...</strong>
+      </p>
+      <p id="timeElementDate">
+        Please wait
+      </p>
+      <div id="calendarPreview" aria-hidden="true">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=iframely.embeds%40gmail.com"
+          title="Calendario de Google"
+          allowfullscreen
+          sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-scripts"></iframe>
+      </div>
+    </div>
+  </div>  
 
-    <p id="timeElement">
-      Time
-    </p>
-  </div>
 
   <div id="desktopApps" style="padding-top: 12px; padding-left: 16px;">
-    <div>
-      <img id="projectsIcon" style="cursor: pointer" src="explorer.png" width="80" height="80"
-        style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
-      <p style="margin-left: 3px;">Projects</p>
+    <div class="desktop-app-list">
+      <div class="desktop-app">
+        <img id="projectsIcon" style="width: 3.5vw; height: 3.5vw; cursor: pointer; border-radius: 10px; object-fit: cover;" src="explorer.png" />
+        <p class="outlined-text">Files</p>
+      </div>
 
-      <img id="settingsIcon" style="cursor: pointer" src="settings.png" width="80" height="80"
-        style="border-radius: 30px; object-fit: cover; vertical-align: middle" />
-      <p style="margin-left: 3px;">Settings</p>
-      <img id="stickyNotesIcon" style="cursor: pointer" src="./sticky_note.png" width="80" height="80"
-        style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
-      <p style="margin-left: 3px;">Note</p>
+      <div class="desktop-app">
+        <img id="settingsIcon" style="width: 3.5vw; height: 3.5vw; cursor: pointer; border-radius: 10px; object-fit: cover;" src="settings.png" />
+        <p class="outlined-text">Settings</p>
+      </div>
+
+      <div class="desktop-app">
+        <img id="stickyNotesIcon" style="width: 3.5vw; height: 3.5vw; cursor: pointer; border-radius: 10px; object-fit: cover;" src="./sticky_note.png" />
+        <p class="outlined-text">Notepad</p>
+      </div>
     </div>
   </div>
 
   <div id="startMenuScreen" class="window" style="display: none; align-items: left; justify-content: space-between;">
 
     <!-- Start Menu content -->
-    <h1>Apps</h1>
+     <div id="startMenuTitle">
+      <h1>Apps</h1>
+     <div id="userProfileBadge" class="user-profile-badge" aria-label="User profile">
+     <img id="desktopProfilePicture" src="profile7.jpg" alt="Profile picture">
+    <span id="desktopUsername">User</span>
+  </div>
+     </div>
+
     <div
       style="display: flex; flex-direction: column; gap: 20px; padding-top: 10px; max-height: 220px; overflow-y: auto;">
       <div style="display: flex; align-items: center; gap: 8px;">
-        <img id="startMenuProjectsIcon" style="cursor: pointer" src="explorer.png" width="40" height="40"
+        <img id="startMenuProjectsIcon" style="width: 3vw; height: 3vw; cursor: pointer" src="explorer.png"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
-        <p style="margin-left: 3px;">Projects</p>
+        <p style="margin-left: 3px;">Files</p>
       </div>
       <div style="display: flex; align-items: center; gap: 8px;">
-        <img id="startMenuWelcomeIcon" style="cursor: pointer" src="welcome.png" width="40" height="40"
+        <img id="startMenuaboutMeIcon" style="width: 3vw; height: 3vw; cursor: pointer" src="aboutMe.png"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
-        <p style="margin-left: 3px;">Welcome</p>
+        <p style="margin-left: 3px;">About Me</p>
       </div>
       <div style="display: flex; align-items: center; gap: 8px;">
-        <img id="startMenuSettingsIcon" style="cursor: pointer" src="settings.png" width="40" height="40"
+        <img id="startMenuSettingsIcon" style="width: 3vw; height: 3vw; cursor: pointer" src="settings.png"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
         <p style="margin-left: 3px;">Settings</p>
       </div>
       <div style="display: flex; align-items: center; gap: 8px;">
-        <img id="startMenuStickyNoteIcon" style="cursor: pointer" src="./sticky_note.png" width="40" height="40"
+        <img id="startMenuStickyNoteIcon" style="width: 3vw; height: 3vw; cursor: pointer" src="./sticky_note.png"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
-        <p style="margin-left: 3px;">Sticky Note</p>
+        <p style="margin-left: 3px;">Notepad</p>
+      </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+        <img id="startMenuPaintIcon" style="width: 3vw; height: 3vw; cursor: pointer" src="./personalization.webp"
+          style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+        <p style="margin-left: 3px;">Paint</p>
       </div>
     </div>
   </div>
@@ -133,28 +168,48 @@
 
     </div>
 
+    <!-- Explorer home content -->
+    <div id="explorerHomeContent" style="display: flex; flex-direction: column; gap: 20px; padding-top: 10px;">
+      <h3 id="documentsPath">C:/Users/You/Documents/</h3>
+      <div style="display: flex; flex-direction: row; gap: 20px;">
+        <div class="project-folder-item">
+          <img id="projects" style="width: 3.5vw; height: 3.5vw; cursor: pointer" src="explorer.png"
+            style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+          <p>Xacobe's Projects</p>
+       </div>
+       <div id="savedNotesList" class="saved-notes-list"></div>
+      </div>
+    </div>
+
+
     <!-- Projects content -->
-    <h1>C:/Users/You/Documents/</h1>
-    <div style="display: flex; flex-direction: row; gap: 20px; padding-top: 10px;">
-      <div>
-        <img id="project1Icon" style="cursor: pointer" src="PC.jpg" width="80" height="80"
+    <div id="creatorProjectsArea" style="display: none; flex-direction: column; gap: 20px; padding-top: 10px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <img id="backToMainProjectsButton" style="width: 3vw; height: 3vw; cursor: pointer" src="back.png"
+          style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
+      <h3 id="projectsPath">C:/Users/You/Documents/Projects/</h3>
+      </div>
+      <div style="display: flex; flex-direction: row; gap: 20px;">
+        <div>
+        <img id="project1Icon" style="width: 3.5vw; height: 3.5vw; cursor: pointer" src="PC.jpg"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
         <p style="margin-left: 3px;">My PC</p>
-      </div>
-      <div>
-        <img id="project2Icon" style="cursor: pointer" src="proxmox.webp" width="80" height="80"
+        </div>
+        <div>
+        <img id="project2Icon" style="width: 3.5vw; height: 3.5vw; cursor: pointer" src="proxmox.webp"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
         <p style="margin-left: 3px;">Homelab</p>
-      </div>
-      <div>
-        <img id="project3Icon" style="cursor: pointer" src="psu.jpg" width="80" height="80"
+        </div>
+        <div>
+        <img id="project3Icon" style="width: 3.5vw; height: 3.5vw; cursor: pointer" src="psu.jpg"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
         <p style="margin-left: 3px;">DIY Lab PSU</p>
-      </div>
-      <div>
-        <img id="project4Icon" style="cursor: pointer" src="hardware.png" width="80" height="80"
+        </div>
+        <div>
+        <img id="project4Icon" style="width: 3.5vw; height: 3.5vw; cursor: pointer" src="hardware.png"
           style="border-radius: 10px; object-fit: cover; vertical-align: middle" />
         <p style="margin-left: 3px;">Many more</p>
+        </div>
       </div>
     </div>
   </div>
@@ -184,7 +239,7 @@
         <li>GPU: EVGA GeForce RTX 3080</li>
         <li>RAM: 24GB DDR4</li>
         <li>Storage: 1TB NVMe SSD</li>
-        <li>Motherboard: gigabyte B550mk</li>
+        <li>Motherboard: Gigabyte B550mk</li>
         <li>PSU: 750W P750BS</li>
         <li>Case: MSI MAG M100R</li>
       </ul>
@@ -251,10 +306,13 @@
 
       <!-- Settings sidenav, thanks W3schools -->
       <div id="settingsSidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">&times;</a>
-        <a id="wallpaperButton">Wallpaper</a>
-        <a id="fontsButton">Fonts</a>
-        <a id="deviceInfoButton">Device Info</a>
+        <a href="javascript:void(0)" onclick="closeNav()">X</a>
+        <a id="wallpaperButton" cursor="pointer">Wallpaper</a>
+        <a id="fontsButton" cursor="pointer">Fonts</a>
+        <a id="themeButton" cursor="pointer">Theme</a>
+        <a id="deviceInfoButton" cursor="pointer">Device Info</a>
+        <a id="SecurityButton" cursor="pointer">Security</a>
+        <a id="FactoryResetSectionButton" cursor="pointer">Factory Reset</a>
       </div>
 
       <!-- Use any element to open the sidenav -->
@@ -275,10 +333,12 @@
             style="border-radius: 10px; object-fit: cover; vertical-align: middle; cursor: pointer;" />
           <img id="wallpaper2" src="wallpaper2.jpg" width="100px" height="100px"
             style="border-radius: 10px; object-fit: cover; vertical-align: middle; cursor: pointer;" />
+          <img id="wallpaper3" src="wallpaper3.jpg" width="100px" height="100px"
+            style="border-radius: 10px; object-fit: cover; vertical-align: middle; cursor: pointer;" />
         </div>
         <div style="background-color: ghostwhite; backdrop-filter: blur(10px); padding: 10px; border-radius: 10px; margin-top: 10px;">
           <p style="margin: 0; margin-bottom: 5px;">Upload your own wallpaper:</p>
-          <input type="file" id="wallpaperUpload" accept="image/*" />
+          <input class="theme-default-button" type="file" id="wallpaperUpload" accept="image/*" />
         </div>
       </div>
 
@@ -291,6 +351,7 @@
         <strong>Fonts</strong>
       </h2>
       <div class="font-options">
+        <p id="Saira" class="font-option" style="font-family: 'Saira';">Saira</p>
         <p id="courierNew" class="font-option" style="font-family: 'Courier New', Courier, monospace;">Courier New</p>
         <p id="arial" class="font-option" style="font-family: 'Arial', sans-serif;">Arial</p>
         <p id="timesNewRoman" class="font-option" style="font-family: 'Times New Roman', serif;">Times New Roman</p>
@@ -302,16 +363,48 @@
         style="background-color: #736f6f77; backdrop-filter: blur(10px); padding: 10px; border-radius: 10px; margin-top: 10px; display: none; flex-direction: column; gap: 10px;">
         <h2>Device Info</h2>
         <h3>Software</h3>
-        <p><strong>Operating System:</strong> XacOS v1.0</p>
+        <p><strong>Operating System:</strong> XacOS v2.0</p>
         <p><strong>Based on:</strong> HTML, CSS, JavaScript</p>
+        <label>
+          <input type="checkbox" id="lowGraphicsCheckbox" />
+          Low graphics mode (for weak GPUs)
+        </label>
         <h3>Hardware</h3>
         <p><strong>CPU threads:</strong> <span id="cpuCores"></span> </p>
         <p><strong>RAM:</strong> <span id="ramSize"></span> </p>
         <p><strong>Platform:</strong> <span id="platform"></span> </p>
+        <p><strong>GPU:</strong> <span id="gpuInfo"></span> </p>
 
       </div>
+
+      <div id="themeSection"
+        class="theme-section"
+        style="background-color: #736f6f77; backdrop-filter: blur(10px); padding: 14px; border-radius: 10px; margin-top: 10px; display: none;">
+        <h3>Theme color</h3>
+        <label for="themeColorPicker">Choose your favourite color</label>
+        <input type="color" id="themeColorPicker" value="#ffffff">
+        <button id="themeDefaultButton" class="theme-default-button" type="button">Restore recommended default</button>
+      </div>
+
+      <div id="securitySection"
+        style="background-color: #736f6f77; backdrop-filter: blur(10px); padding: 10px; border-radius: 10px; margin-top: 10px; display: none;">
+        <h3>Security</h3>
+        <h2 id="GeneralStatus">✅ Everything looks ok</h2>
+        <p id="URLCheck"></p>
+        <p id="openSourceCheck"></p>
+        <p id="authorCheck"></p>
+        <h5 style="color:grey" max-width="100px"> <i>This software is open source, feel free to modify <br> or make your own custom version. <br> This check is for informational purposes only</i> </h5>
     </div>
 
+    <div id="factoryResetSection"
+        style="background-color: #736f6f77; backdrop-filter: blur(10px); padding: 10px; border-radius: 10px; margin-top: 10px; display: none;">
+        <h3>Factory Reset</h3>
+        <p>Are you sure you want to reset your device?</p>
+        <p style="color: red;">This will erase all your data and settings!</p>
+        <button id="factoryResetButton" style="padding: 5px 10px; border-radius: 5px;">Factory Reset</button>
+
+    </div>
+    </div>
   </div>
   <div id="stickyNotesScreen" class="window"
     style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between; background-color: beige;">
@@ -324,16 +417,183 @@
 
     </div>
     <div style="background-color: beige;">
+      <div id="notesSettingsArea" style="display: flex; flex-direction: row; gap: 10px; margin-bottom: 10px; margin-top: 5px;">
+        <img id="saveNotesButton" src="save.png" style="padding: 5px 10px; border-radius: 5px; height: 30px; width: 30px; cursor: pointer;" title="Save note" />
+        <img id="exportNotesButton" src="exportastxt.png" style="padding: 5px 10px; border-radius: 5px; height: 30px; width: 30px; cursor: pointer;" title="Export note as txt" />
+        <img id="newNoteButton" src="newnote.png" style="margin-left: auto;padding: 5px 7px; border-radius: 5px; height: 30px; width: 30px; cursor: pointer;" title="Create new note" />
+
+
+      </div>
+      <div style="background-color: beige; margin-bottom: 10px; align-items: center; justify-content: space-between; display: flex; flex-direction: row; gap: 10px;">
+         <p style="margin: 0; margin-bottom: 5px;">Title:</p>
+         <textarea id="stickyNotesTitleArea" rows="1" cols="30"
+        style="width: 100%; height: 30px; resize: none; border-radius: 10px; background-color: beige; font-size: 16px; margin-bottom: 5px; margin-top: 10px;"></textarea>
+     </div>
       <!-- Sticky Note content -->
       <textarea id="stickyNotesTextarea" rows="10" cols="30"
-        style="width: 100%; height: 200px; resize: none; border-radius: 10px; background-color: beige;"></textarea>
+        style="width: 100%; height: 200px; resize: none; border-radius: 10px; background-color: beige; font-size: 16px;"></textarea>
     </div>
 
 
   </div>
 
+  <div id="OOBEScreen" class="window"
+    style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between; max-width: 40%">
+
+    <!-- OOBE header -->
+    <div id="OOBEScreenheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">Setup</p>
+      <!-- Close button -->
+      <div id="OOBEClose" class="closebutton"> X </div>
+
+    </div>
+    <div id="OOBEScreen1" class="OOBEContent">
+      <!-- OOBE content -->
+      <h1 style="color:#456067f1">Welcome to XacOS v2.0!</h1>
+      <p> <strong>Thanks for choosing XacOS!</strong> </p>
+      <p class="oobe-description">This setup wizard will help you get everything as you like it.</p>
+      <label>
+        <input type="checkbox" id="OOBECheckbox1">
+        Low graphics mode (for weak GPUs)
+      </label>
+      <h4 style="color: #456067ab;"> <i>Welcome to your new home</i> </h4>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <p style="margin: 0;"> <strong>Click the arrow to continue</strong> </p>
+      <img id="OOBEArrow1" src="arrow.png" style="width: 10%; height: 10%; cursor: pointer;" align="center">
+
+    </div>
+    </div>
+
+    <div id="OOBEScreen2" class="OOBEContent" style="display: none;">
+      <h1 style="color:#456067f1">How to use XacOS</h1>
+      <h2 style="color:rgb(75, 75, 75)">Open apps</h2>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="doubleclick.gif" width="128" height="128">
+        <div>
+          <p class="oobe-description">You can open apps by double-clicking on the desktop icons, or by clicking on the start menu and selecting the app you want to open.</p>
+          <p style="color:grey"> <i> Apps and folders only open by double-clicking, except on the start menu, this is intended behavior </i> </p>
+        </div>
+      </div>
 
 
-  <script src="script.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <p style="margin: 0;"> <strong>Click the arrow to continue</strong> </p>
+        <img id="OOBEArrow2" src="arrow.png" style="width: 10%; height: 10%; cursor: pointer;" align="center">
+      </div>
+
+    </div>
+
+    
+    <div id="OOBEScreen3" class="OOBEContent" style="display: none;">
+      <h1 style="color:#456067f1">How to use XacOS</h1>
+      <h2 style="color:rgb(75, 75, 75)">Close apps</h2>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="closegif.gif" width="128" height="128">
+        <div>
+          <p class="oobe-description">You can close apps by clicking the 'X' button in the top-right corner of the window.</p>
+        </div>
+      </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <p style="margin: 0;"> <strong>Click the arrow to continue</strong> </p>
+        <img id="OOBEArrow3" src="arrow.png" style="width: 10%; height: 10%; cursor: pointer;" align="center">
+      </div>
+    </div>
+
+
+    <div id="OOBEScreen4" class="OOBEContent" style="display: none;">
+      <h1 style="color:#456067f1">How to use XacOS</h1>
+      <h2 style="color:rgb(75, 75, 75)">Bring apps to front</h2>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="taskbargif.gif" width="256" height="128">
+        <div>
+          <p class="oobe-description">You can bring apps to the front by clicking on their taskbar icons.</p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <p style="margin: 0;"><strong>Click the arrow to continue</strong></p>
+        <img id="OOBEArrow4" src="arrow.png" style="width: 10%; height: 10%; cursor: pointer;" align="center">
+      </div>
+    </div>
+
+    <div id="OOBEScreen5" class="OOBEContent" style="display: none;">
+      <h1 style="color:#456067f1">Who are you?</h1>
+      <h2 style="color:rgb(75, 75, 75)">Create your user profile</h2>
+      <div class="profile-setup">
+        <img id="selectedProfilePicture" class="selected-profile-picture" src="profile7.jpg" alt="Selected profile picture">
+        <div class="UsernameInput">
+          <label for="usernameInput">Username:</label>
+          <input type="text" id="usernameInput" placeholder="Enter your username">
+        </div>
+        <div class="ProfilePictureInput">
+          <p>Select a profile picture:</p>
+          <div id="profilePictureOptions" class="profile-picture-options">
+            <img id="profilePicture2" class="profile-picture-option" src="profile2.jpg" alt="Profile picture 2">
+            <img id="profilePicture3" class="profile-picture-option" src="profile3.jpg" alt="Profile picture 3">
+            <img id="profilePicture4" class="profile-picture-option" src="profile4.jpg" alt="Profile picture 4">
+            <img id="profilePicture5" class="profile-picture-option" src="profile5.jpg" alt="Profile picture 5">
+            <img id="profilePicture6" class="profile-picture-option" src="profile6.jpg" alt="Profile picture 6">
+            <img id="profilePicture7" class="profile-picture-option selected" src="profile7.jpg" alt="Profile picture 7">
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <p style="margin: 0;"><strong>Click the arrow to continue</strong></p>
+        <img id="OOBEArrow5" src="arrow.png" style="width: 10%; height: 10%; cursor: pointer;" align="center">
+      </div>
+    </div>
+
+    <div id="OOBEScreen6" class="OOBEContent" style="display: none;">
+      <h1 style="color:#456067f1">Customize XacOS</h1>
+      <h2 style="color:rgb(75, 75, 75)">Choose your favourite font</h2>
+      <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="font-options">
+            <p id="SairaOOBE" class="font-option" style="font-family: 'Saira';">Saira</p>
+            <p id="courierNewOOBE" class="font-option" style="font-family: 'Courier New', Courier, monospace;">Courier New</p>
+            <p id="arialOOBE" class="font-option" style="font-family: 'Arial', sans-serif;">Arial</p>
+            <p id="timesNewRomanOOBE" class="font-option" style="font-family: 'Times New Roman', serif;">Times New Roman</p>
+          </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <p style="margin: 0;"><strong>Click the arrow to continue</strong></p>
+        <img id="OOBEArrow6" src="arrow.png" style="width: 10%; height: 10%; cursor: pointer;" align="center">
+      </div>
+    </div>
+
+    <div id="OOBEScreen7" class="OOBEContent" style="display: none;">
+      <h1 style="color:#456067f1">You're all set</h1>
+      <h2 style="color:rgb(75, 75, 75)">Ready to explore</h2>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="OOBE.png" width="128" height="128">
+        <div>
+          <p class="oobe-description">Your XacOS setup is ready. You can now explore the desktop, open apps, and customize the environment however you like.</p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <p style="margin: 0;"><strong>Click the arrow to finish</strong></p>
+        <img id="OOBEArrow7" src="arrow.png" style="width: 10%; height: 10%; cursor: pointer;" align="center">
+      </div>
+    </div>
+
+    </div>
+
+
+  </div>
+<div id="paintScreen" class="window"
+    style="top: 50%; left: 50%; display: none; align-items: center; justify-content: space-between;">
+
+    <!-- Paint header -->
+    <div id="paintScreenheader" class="windowheader">
+      <p style="margin-left: 10px; color: #000000; font-weight: 500">Paint</p>
+      <!-- Close button -->
+      <div id="paintScreenClose" class="closebutton"> X </div>
+
+    </div>
+    <div class="paint-content">
+      <iframe src="https://jspaint.app?theme=modern" title="Paint"></iframe>
+
+    </div>
+
+</div>
+
+
 </body>
