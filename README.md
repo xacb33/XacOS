@@ -28,10 +28,10 @@ https://jams.hackclub.com/batch/webOS
 
 # Functions
 
-## Welcome screen
-![screenshot](welcomescreenshot.png)
-The first screen that you encounter when starting up. (You can also open it clicking Welcome in the start menu) 
-It is the main introduction to myself, citing some facts about me.
+## Setup wizard
+<img width="1063" height="497" alt="image" src="https://github.com/user-attachments/assets/7af81faa-1ddc-452e-b10f-f6a2094d9c8a" />
+
+The first screen that you encounter when starting up. Here you can learn how to use XacOS and personalize some things to your liking. It will only appear once (Unless you do a factory reset)
 
 ## Projects app
 ![explorerlogo](explorer.png)
